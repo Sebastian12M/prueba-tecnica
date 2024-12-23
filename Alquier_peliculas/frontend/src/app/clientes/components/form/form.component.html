@@ -1,0 +1,57 @@
+
+
+@if (error!='') {
+  <div class="alert alert-danger mt-4" role="alert">
+    <p>{{error}}</p>
+  </div>
+}
+
+@if (resultadoCliente) {
+  <div class="alert alert-success mt-4" role="alert">
+    <p>El cliente ha sido registrado exitosamente.</p>
+  </div>
+}
+
+<form class="container mt-5 shadow-lg p-3 mb-5 bg-body-tertiary rounded text-center" #clienteForm="ngForm" >
+  <h1 class="text-center m-5 badge text-bg-primary text-wrap ">Registrar Cliente</h1>
+  <div class="m-3">
+    <label for="cedula" class="form-label fs-5">Cédula</label>
+    <div class="input-group input-group-lg">
+      <input type="number" class="form-control" id="cedula" name="cedula" [(ngModel)]="cliente.cedula" #cedula="ngModel" required>
+    </div>
+    @if(cedula.invalid && (cedula.dirty || cedula.touched)) {
+      <div class="alert alert-danger mt-2">
+        La cédula es requerida.
+      </div>
+    }
+  </div>
+  <div class="m-3">
+    <label for="nombre" class="form-label fs-5">Nombre</label>
+    <div class="input-group input-group-lg">
+      <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="cliente.nombre" #nombre="ngModel" required>
+    </div>
+    @if (nombre.invalid && (nombre.dirty || nombre.touched)) {
+      <div class="alert alert-danger mt-2">
+        El nombre es requerido.
+      </div>
+    }
+  </div>
+  <div class="m-3">
+    <label for="correo" class="form-label fs-5">Correo</label>
+    <div class="input-group input-group-lg">
+      <input type="email" class="form-control" id="correo" name="correo" [(ngModel)]="cliente.correo" #correo="ngModel" required>
+    </div>
+    @if (correo.invalid && (correo.dirty || correo.touched)) {
+      <div class="alert alert-danger mt-2">
+        El correo es requerido.
+      </div>
+    }
+  </div>
+
+  @if (clienteForm.invalid) {
+    <button type="submit" class="btn btn-primary m-3" disabled>Registrar</button>
+  }@else {
+    <button type="submit" class="btn btn-primary m-3" (click)="insertarCliente()">Registrar</button>
+  }
+
+</form>
