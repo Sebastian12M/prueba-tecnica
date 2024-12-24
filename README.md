@@ -15,7 +15,7 @@ La carpeta **Ejercicios** contiene el ejertcicio 1 y 2
 
 Antes de empezar asegúrate de tener esto instalado en tu computadora:
 
-- **Java 17 o más reciente.**
+- **Java 21 o más reciente.**
 - **Node.js** y **Angular CLI**.
 - **Mysql** para configurar la base de datos
 
