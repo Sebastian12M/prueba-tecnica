@@ -13,7 +13,7 @@ La carpeta **Ejercicios** contiene el ejertcicio 1 y 2
 
 ### Necesario
 
-Antes de empezar asegúrate de tener esto instalado en tu computadora:
+Antes de empezar asegúrarse de tener esto instalado:
 
 - **Java 21 o más reciente.**
 - **Node.js** y **Angular CLI**.
@@ -21,25 +21,25 @@ Antes de empezar asegúrate de tener esto instalado en tu computadora:
 
 ### 1. **Ejecutar el Script SQL**
 
-Primero, necesita ejecutar el script SQL que está en la carpeta `ScripSql` para que se configure la base de datos.
+Primero, se necesita ejecutar el script SQL que está en la carpeta `ScripSql` para que se configure la base de datos.
 
 ### 2. **Ejecutar el Frontend**
 
 Para hacer que funcione el frontend:
 
 1. **Instalar las dependencias**:
-   - Asegúrate de tener **Node.js** y **Angular CLI** instalados
-   - Luego ve a la carpeta donde está el frontend y abre la terminal o línea de comandos, Ahí ejecuta el siguiente comando para instalar lo que necesita:
+   - Asegurese de tener **Node.js** y **Angular CLI** instalados
+   - Luego ir a la carpeta donde está el frontend y abra el terminal o línea de comandos, Ahí ejecute el siguiente comando para instalar lo que necesita:
      ```bash
      npm install
      ```
 
 2. **Iniciar el servidor**:
-   - Una vez que las dependencias estén instaladas, ejecuta este comando para que el servidor arranque:
+   - Una vez que las dependencias estén instaladas, ejecute este comando para que el servidor arranque:
      ```bash
      ng serve
      ```
-   - **Nota importante**: Asegúrate de que el frontend se ejecute en el puerto **4200**, porque el backend está preparado para recibir las solicitudes solo desde ese puerto.
+   - **Nota importante**: Asegurese de que el frontend se ejecute en el puerto **4200**, porque el backend está preparado para recibir las solicitudes solo desde ese puerto.
 
 ### 3. **Ejecutar el Backend**
 
