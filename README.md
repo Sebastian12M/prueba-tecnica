@@ -59,7 +59,7 @@ Para ejecutar el backend:
 Al entrar a la aplicacion nos vamos a encontrar con todas las camaras que tiene la aplicacion actualmente, cada camara tiene su nombre y modelo. 
 Aparte de esto cada una cuenta con 3 botones los cuales hacen lo siguiente:
 
-ALQUILAR : al dar click en este boton nos llevara a otra parte donde podemos ver todo los detalle de la camara y otra vez el boton de alquilar
+**ALQUILAR :** al dar click en este boton nos llevara a otra parte donde podemos ver todo los detalle de la camara y otra vez el boton de alquilar
 para confirmar que queremos alquilar la camara, si le damos click este nos manda a un  formulaio donde vamos a tener que insertar la
  cedula del cliente que quiere alquilar la camara, para que un cliente puedo alquilar la camara debe de estar registrado y no tener alguna camara 
  de alquiler pendiente por entregar y tampoco puede tener multas, al dar click en registrar alquiler  si el cliente cumple con los requisitos
