@@ -31,10 +31,12 @@ export class FormComponentCliente {
   insertarCliente():void{
     this.service.insertarCliente(this.cliente).subscribe(
       data=>{
+        this.error='';
         this.resultadoCliente=true;
         console.log('Cliente insertado:', data)
       },
       error=>{
+        this.resultadoCliente=false;
         this.error=error.error;
         console.error('Error al insertar cliente:', error)
       }

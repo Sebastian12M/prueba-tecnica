@@ -83,7 +83,7 @@ public class AlquilerServiceImpl implements AlquilerService{
         AlquilerEntity alquilerUpdate = new AlquilerEntity();
         if(cliente.isPresent()){
             List<AlquilerEntity> alquileres = alquilerRepository.findByCliente(cliente.get());
-            if(!alquileres.isEmpty()){
+            if(permitirAlquiler(cliente.get())){
                 for (AlquilerEntity itemAlquiler: alquileres){
                     if(!itemAlquiler.isEstado()){
                         itemAlquiler.setEstado(true);

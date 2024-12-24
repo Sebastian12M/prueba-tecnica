@@ -24,8 +24,8 @@ public class CamaraServiceImpl implements CamaraService {
     }
 
     @Override
-    public CamaraEntity updateCamara() {
-        return null;
+    public CamaraEntity updateCamara(CamaraEntity camara) {
+        return camaraRepository.save(camara);
     }
 
     @Override

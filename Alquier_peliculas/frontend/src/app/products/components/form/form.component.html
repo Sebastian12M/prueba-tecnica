@@ -1,14 +1,31 @@
 
 
-<div class="alert alert-success mt-4" role="alert">
-  <p>Si el cliente ya se encuentra registrado Por favor digite la cedula con la cual se registro.
+@if (path==='devolucion') {
+  <div class="alert alert-warning mt-5" role="alert">
+    <h4 class="alert-heading">Recuerda!</h4>
+    <p>Para registrar la entrega de una camara debe ser con la cedula del cliente que la alquilo</p>
+    <hr>
+    <p class="mb-0">ALQUILER DE CAMARAS.</p>
+  </div>
+}@else {
 
-  </p>
-  <p>
-    En el caso que no este registrado por favor registrelo antes de Alquilar una camara
-  </p>
-  <a href="/registrar-cliente" class="alert-link">Click aqui para registrar un cliente</a>.
-</div>
+
+    <div class="alert alert-success mt-5" role="alert">
+    <h4 class="alert-heading">Recuerda!</h4>
+    <p>Si el cliente ya se encuentra registrado Por favor digite la cedula con la cual se registro.</p>
+    <p>
+      En el caso que no este registrado por favor registrelo antes de Alquilar una camara.
+    </p>
+    <hr>
+
+    <a href="/registrar-cliente" class="alert-link">Click aqui para registrar un cliente</a>.
+  </div>
+
+
+
+
+}
+
 
 @if (error!='') {
   <div class="alert alert-danger mt-4" role="alert">
@@ -19,13 +36,13 @@
 
 @if (resultadoAlquiler) {
   <div class="alert alert-success mt-4" role="alert">
-    <p>La camara ha sido alquila exitosamente.</p>
+    <p>El alquiler se registro correctamente</p>
   </div>
 }
 
 @if (devolucionAlquiler) {
   <div class="alert alert-success mt-4" role="alert">
-    <p>La entrega guardad correctamente</p>
+    <p>La devolucion se registro correctamente</p>
   </div>
 }
 
@@ -69,3 +86,8 @@
   }
 
 </form>
+
+
+
+
+

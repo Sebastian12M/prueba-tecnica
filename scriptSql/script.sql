@@ -1,3 +1,8 @@
+
+CREATE DATABASE IF NOT EXISTS alquiler_camaras;
+
+USE alquiler_camaras;
+
 CREATE TABLE clientes (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
     cedula BIGINT,
@@ -50,32 +55,42 @@ CREATE TABLE alquileres(
 );
 
 
+
 INSERT INTO clientes (cedula, correo, nombre, dias_multa)
 VALUES
     (123456789, 'cliente1@example.com', 'Juan Pérez', 0),
     (987654321, 'cliente2@example.com', 'Ana Gómez', 0),
-    (555555555, 'cliente3@example.com', 'Carlos Sánchez', 0);
+    (555555555, 'cliente3@example.com', 'Carlos Sánchez', 0),
+    (123987654, 'cliente4@example.com', 'María López', 2),
+    (321654987, 'cliente5@example.com', 'Pedro Martínez', 1);
 
 
 INSERT INTO marcas (nombre, direccion)
 VALUES
     ('Canon', 'Av. de la Tecnología 123, Ciudad ABC'),
     ('Nikon', 'Calle Innovación 456, Ciudad XYZ'),
-    ('Sony', 'Avenida de la Fotografía 789, Ciudad DEF');
+    ('Sony', 'Avenida de la Fotografía 789, Ciudad DEF'),
+    ('Fujifilm', 'Calle de los Lentes 111, Ciudad GHI'),
+    ('Panasonic', 'Avenida del Sol 333, Ciudad JKL');
 
 
 INSERT INTO peliculas (nombre, marca, sensibilidad_iso, formato)
 VALUES
     ('Película A', 'Canon', 800, '35mm'),
     ('Película B', 'Nikon', 1600, '120mm'),
-    ('Película C', 'Sony', 400, '35mm');
+    ('Película C', 'Sony', 400, '35mm'),
+    ('Película D', 'Fujifilm', 3200, '35mm'),
+    ('Película E', 'Panasonic', 800, '120mm');
 
 
 INSERT INTO camaras (soporte_flash, estado, modelo, marca_id)
 VALUES
     (TRUE, 'DISPONIBLE', 'Canon EOS 5D', 1),
     (FALSE, 'DISPONIBLE', 'Nikon D850', 2),
-    (TRUE, 'DISPONIBLE', 'Sony Alpha 7', 3);
+    (TRUE, 'DISPONIBLE', 'Sony Alpha 7', 3),
+    (TRUE, 'EN REPARACION', 'Sony Alpha 9', 3),
+    (TRUE, 'DISPONIBLE', 'Fujifilm X-T4', 4),
+    (FALSE, 'DISPONIBLE', 'Panasonic Lumix GH5', 5);
 
 
 INSERT INTO peliculas_camaras (camara_id, peliculas_id)
@@ -83,8 +98,10 @@ VALUES
     (1, 1),  
     (1, 3),  
     (2, 2),  
-    (3, 1);  
-
+    (3, 1),  
+    (4, 4),  
+    (5, 5),  
+    (6, 2);
 
 
 

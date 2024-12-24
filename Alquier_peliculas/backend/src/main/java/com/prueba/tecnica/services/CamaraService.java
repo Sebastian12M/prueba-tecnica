@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface CamaraService {
     List<CamaraEntity> findAll();
     Optional<CamaraEntity> findById(Long id);
-    CamaraEntity updateCamara();
+    CamaraEntity updateCamara(CamaraEntity camara);
     void deleteCamara(Long id);
     CamaraEntity saveCamara(CamaraEntity camara);
 }

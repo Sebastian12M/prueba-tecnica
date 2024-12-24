@@ -20,6 +20,18 @@ export class ProductComponent {
 
   camaras:Camara[]=[]
   ngOnInit():void{
+    this.cargarCamaras();
+  }
+
+  public verDetalles(camaraId:number){
+    this.router.navigate(['/detalles',camaraId]);
+  }
+
+  public editarCamara(camaraId:number){
+    this.router.navigate(['/editar-camara',camaraId]);
+  }
+
+  cargarCamaras(){
     this.service.findAll().subscribe(
       data => {
         this.camaras = data;
@@ -31,8 +43,16 @@ export class ProductComponent {
     );
   }
 
-  public verDetalles(camaraId:number){
-    this.router.navigate(['/detalles',camaraId]);
+  cambiarEstado(id:number, estado:string){
+    this.service.cambiarEstado(id, estado).subscribe(
+      data=>{
+        console.log("El estado se cambio", data)
+        this.cargarCamaras()
+      },
+      error=>{
+        console.log("El estado no cambio", error)
+      }
+    )
   }
 
 }

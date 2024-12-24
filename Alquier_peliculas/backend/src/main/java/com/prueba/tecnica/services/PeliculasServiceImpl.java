@@ -13,7 +13,7 @@ public class PeliculasServiceImpl implements PeliculasService{
     PeliculasRepository peliculasRepository;
     @Override
     public List<PeliculasEntity> findAll() {
-        return null;
+        return peliculasRepository.findAll();
     }
 
     @Override

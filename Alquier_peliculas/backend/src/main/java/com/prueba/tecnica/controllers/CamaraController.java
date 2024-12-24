@@ -8,6 +8,8 @@ import com.prueba.tecnica.services.CamaraServiceImpl;
 import com.prueba.tecnica.services.MarcasService;
 import com.prueba.tecnica.services.PeliculasService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -50,6 +52,22 @@ public class CamaraController {
     public CamaraEntity obtenerCamaraPorId(@PathVariable Long id){
         Optional<CamaraEntity> camara = camaraService.findById(id);
         return camara.get();
+    }
+
+    @PutMapping
+    public CamaraEntity updateCamara(@RequestBody CamaraEntity camara){
+
+        return camaraService.updateCamara(camara);
+    }
+
+    @PatchMapping("/{id}")
+    public ResponseEntity<?> updateEstado(@PathVariable Long id, @RequestBody String estado){
+        Optional<CamaraEntity> camara = camaraService.findById(id);
+        if (camara.isPresent()){
+            camara.get().setEstado(estado);
+        }
+
+        return ResponseEntity.ok().body(camaraService.saveCamara(camara.get()));
     }
 
 }

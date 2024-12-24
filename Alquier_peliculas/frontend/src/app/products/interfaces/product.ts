@@ -50,4 +50,14 @@ export interface Alquiler{
 
 }
 
+export interface CamaraInsert{
+  modelo: string;
+  marca: string;
+  soporteFlash: boolean;
+  peliculas: number[];
+  estado: string;
+}
+
+
+
 
