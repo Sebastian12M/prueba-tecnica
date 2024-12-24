@@ -6,7 +6,7 @@
 - **Base de Datos:** MySQL.
 - **Scripts SQL:** Los puedes encontrar en la carpeta `ScripSql`.
 
-La carpeta **Alquiler_peliculas** tiene todo el código del frontend y del backend.
+La carpeta **Alquiler_camaras** tiene todo el código del frontend y del backend.
 La carpeta **Ejercicios** contiene el ejertcicio 1 y 2
 
 ## Cómo Ejecutar el Proyecto
