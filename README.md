@@ -10,7 +10,7 @@ La carpeta **Alquiler_peliculas** tiene todo el código del frontend y del backe
 
 ## Cómo Ejecutar el Proyecto
 
-### Qué Necesitas Tener
+### Qué Necesita Tener
 
 Antes de empezar, asegúrate de tener esto instalado en tu computadora:
 
@@ -19,15 +19,15 @@ Antes de empezar, asegúrate de tener esto instalado en tu computadora:
 
 ### 1. **Ejecutar el Script SQL**
 
-Primero, necesitas ejecutar el script SQL que está en la carpeta `ScripSql` para que se configure la base de datos.
+Primero, necesita ejecutar el script SQL que está en la carpeta `ScripSql` para que se configure la base de datos.
 
 ### 2. **Ejecutar el Frontend**
 
 Para hacer que funcione el frontend:
 
 1. **Instalar las dependencias**:
-   - Asegúrate de tener **Node.js** y **Angular CLI** instalados.
-   - Luego, ve a la carpeta donde está el frontend y abre la terminal o línea de comandos. Ahí, ejecuta el siguiente comando para instalar lo que necesita:
+   - Asegúrate de tener **Node.js** y **Angular CLI** instalados
+   - Luego, ve a la carpeta donde está el frontend y abre la terminal o línea de comandos. Ahí ejecuta el siguiente comando para instalar lo que necesita:
      ```bash
      npm install
      ```
