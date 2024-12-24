@@ -3,19 +3,21 @@
 
 - **Backend:** Está hecho con Java y Spring Boot.
 - **Frontend:** Está hecho con Angular.
-- **Base de Datos:** Se usa MySQL.
+- **Base de Datos:** MySQL.
 - **Scripts SQL:** Los puedes encontrar en la carpeta `ScripSql`.
 
 La carpeta **Alquiler_peliculas** tiene todo el código del frontend y del backend.
+La carpeta **Ejercicios** contiene el ejertcicio 1 y 2
 
 ## Cómo Ejecutar el Proyecto
 
-### Qué Necesita Tener
+### Necesario
 
-Antes de empezar, asegúrate de tener esto instalado en tu computadora:
+Antes de empezar asegúrate de tener esto instalado en tu computadora:
 
 - **Java 17 o más reciente.**
 - **Node.js** y **Angular CLI**.
+- **Mysql** para configurar la base de datos
 
 ### 1. **Ejecutar el Script SQL**
 
@@ -27,7 +29,7 @@ Para hacer que funcione el frontend:
 
 1. **Instalar las dependencias**:
    - Asegúrate de tener **Node.js** y **Angular CLI** instalados
-   - Luego, ve a la carpeta donde está el frontend y abre la terminal o línea de comandos. Ahí ejecuta el siguiente comando para instalar lo que necesita:
+   - Luego ve a la carpeta donde está el frontend y abre la terminal o línea de comandos, Ahí ejecuta el siguiente comando para instalar lo que necesita:
      ```bash
      npm install
      ```
