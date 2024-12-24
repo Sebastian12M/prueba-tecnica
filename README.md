@@ -45,15 +45,18 @@ Para hacer que funcione el frontend:
 
 Para ejecutar el backend:
 
-1. Asegúrate de tener **Java 17 o más reciente** instalado.
+1. Tener **Java 21 o más reciente** instalado.
+2. - **Maven** instalado para compilar las dependencias.
 
-2. **Ejecutar el archivo JAR**:
-   - Ve a la carpeta donde está el archivo **`tecnica-0.0.1-SNAPSHOT.jar`** (está en la carpeta **`target`** dentro del backend).
-   - Una vez ahí, ejecuta este comando para iniciar el servidor:
+3. Ir al directorio del backend
+4. Instalar las dependencias con el siguiente comando
      ```bash
-     java -jar tecnica-0.0.1-SNAPSHOT.jar
+     mvn install
      ```
-   - Verifica que el puerto **8080** esté libre para que el servidor funcione bien.
+5. Ejecutar el proyecto
+   ```bash
+     mvn spring-boot:run
+     ```  
 
 ## Funcionamiento de la aplicacion
 Al entrar a la aplicacion nos vamos a encontrar con todas las camaras que tiene la aplicacion actualmente, cada camara tiene su nombre y modelo. 
